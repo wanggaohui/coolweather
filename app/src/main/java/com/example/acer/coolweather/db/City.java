@@ -1,4 +1,4 @@
-package com.example.acer.coolweather;
+package com.example.acer.coolweather.db;
 
 import org.litepal.crud.DataSupport;
 //市级字段

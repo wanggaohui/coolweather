@@ -27,4 +27,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     //添加LitePal数据库闭包
     implementation 'org.litepal.android:core:1.4.1'
+    //添加okhttp开源框架闭包
+    implementation 'com.squareup.okhttp3:okhttp:3.4.1'
 }
