@@ -1,6 +1,6 @@
 package com.example.acer.coolweather.util;
 
-import android.app.DownloadManager;
+import java.net.URL;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

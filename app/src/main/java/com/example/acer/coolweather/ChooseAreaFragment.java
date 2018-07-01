@@ -2,7 +2,10 @@ package com.example.acer.coolweather;
 
 import android.app.Fragment;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -109,7 +112,7 @@ public class ChooseAreaFragment extends Fragment {
 
     private void queryProvinces() {
         backButton.setVisibility(View.GONE);
-        textTitle.setText("中国");
+        textTitle.setText("选择省份");
         provinceList = DataSupport.findAll(Province.class);
         if (provinceList.size() > 0) {
             dataList.clear();
@@ -127,7 +130,7 @@ public class ChooseAreaFragment extends Fragment {
 
     private void queryCities(){
         backButton.setVisibility(View.VISIBLE);
-        textTitle.setText(selectedProvince.getProvinceName());
+        textTitle.setText("选择城市");
         cityList = DataSupport.where("provinceid = ?",
                 String.valueOf(selectedProvince.getId())).find(City.class);
         if(cityList.size() > 0){
@@ -146,7 +149,7 @@ public class ChooseAreaFragment extends Fragment {
 
     private void queryCountries(){
         backButton.setVisibility(View.VISIBLE);
-        textTitle.setText(selectedCity.getCityName());
+        textTitle.setText("选择县城");
         countryList = DataSupport.where("cityid = ?",
                 String.valueOf(selectedCity.getId())).find(Country.class);
         if(countryList.size() > 0){

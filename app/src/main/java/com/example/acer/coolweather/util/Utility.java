@@ -1,6 +1,7 @@
 package com.example.acer.coolweather.util;
 
 import android.text.TextUtils;
+import android.util.Log;
 
 import com.example.acer.coolweather.db.City;
 import com.example.acer.coolweather.db.Country;
